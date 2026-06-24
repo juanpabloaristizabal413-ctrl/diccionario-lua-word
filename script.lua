@@ -1,5 +1,5 @@
 -- =====================================================================
--- 🌎 SÚPER MEGA BASE DE DATOS BILINGÜE Y MOTOR (ES + EN) - V3.0 (COMBINADO + EXTRAS)
+-- SPER MEGA BASE DE DATOS BILINGE Y MOTOR (ES + EN) - V3.0 (COMBINADO + EXTRAS)
 -- =====================================================================
 
 local database = {
@@ -70,7 +70,7 @@ local database = {
 }
 
 -- =====================================================================
--- === ADICIONAL: combinaciones nuevas (≈200 claves)
+-- === ADICIONAL: combinaciones nuevas (200 claves)
 -- - No sobrescriben claves existentes en `database`; se añaden solo si la clave no existe.
 -- - Cada clave tiene varias palabras (mezcla ES/EN) que comienzan con la clave.
 -- =====================================================================
@@ -194,7 +194,7 @@ for k, v in pairs(additional_combinations) do
 end
 
 -- =====================================================================
--- ⚙️ MOTOR DE INTERFAZ Y LÓGICA DE BÚSQUEDA (sin cambios funcionales)
+--  MOTOR DE INTERFAZ Y LGICA DE BSQUEDA (sin cambios funcionales)
 -- =====================================================================
 
 local CoreGui = game:GetService("CoreGui")
