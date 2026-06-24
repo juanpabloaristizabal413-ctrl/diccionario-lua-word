@@ -1,5 +1,5 @@
 -- =====================================================================
--- 🌎 SÚPER MEGA BASE DE DATOS BILINGÜE Y MOTOR (ES + EN) - V3.0 (COMBINADO + EXTRAS)
+-- 🌎 SÚPER MEGA BASE DE DATOS BILINGÜE Y MOTOR (ES + EN) - V6.0 (LA DEFINITIVA)
 -- =====================================================================
 
 local database = {
@@ -70,12 +70,11 @@ local database = {
 }
 
 -- =====================================================================
--- === ADICIONAL: combinaciones nuevas (≈200 claves)
--- - No sobrescriben claves existentes en `database`; se añaden solo si la clave no existe.
--- - Cada clave tiene varias palabras (mezcla ES/EN) que comienzan con la clave.
+-- === ADICIONAL: TUS BLOQUES + LAS NUEVAS COMBINACIONES PEDIDAS ===
 -- =====================================================================
 
 local additional_combinations = {
+    -- BLOQUE 1: TUS COMBINACIONES ORIGINALES AA-AZ, BA-BZ
     ["aa"] = {"aardvark","aahed","aalii","aarrgh","aachen","aamoo","aarti","aavik","aaliyah","aachenian"},
     ["ab"] = {"abaco","abandon","abasto","abierto","abismo","abogado","abono","abrazar","abrazo","abreviar"},
     ["ac"] = {"accion","acabar","achar","acero","acepta","access","accent","accept","acclaim","acne"},
@@ -89,11 +88,11 @@ local additional_combinations = {
     ["ak"] = {"akbar","akimbo","akoya","akira","ak47","akoya","aksel","akela","akimboed","akoyaing"},
     ["al"] = {"alegre","alumno","altura","almuerzo","alerta","alias","allow","almost","alcohol","alondra"},
     ["am"] = {"amor","amigo","ambos","ambiente","amanecer","amable","amparo","amplio","amaze","amend"},
-    ["an"] = {"animal","andar","ancla","anhelo","anotar","andariego","anglo","anchor","angle","announce"},
+    ["an"] = {"animal","andar","ancla","anhelo","anotar","andariego","anglo","anchor","angle","announce", "anillo", "angry", "angel", "ancho", "answer", "antes"},
     ["ao"] = {"aorta","aoni","aortaical","aoristic","aone","aor","aoristicly","aonach","aodp","aos"},
     ["ap"] = {"aparte","apoyo","aprender","aplicacion","aparece","aplicado","apple","apply","appoint","approve"},
     ["aq"] = {"aqua","aquesta","aquarelle","aquatic","aquarium","aqueous","aquifer","aquinas","aqaba","aqeel"},
-    ["ar"] = {"arriba","archivo","arte","area","arboleda","aroma","armar","around","arrive","argument"},
+    ["ar"] = {"arriba","archivo","arte","area","arboleda","aroma","armar","around","arrive","argument", "arena", "arm", "arbol", "army", "arma", "armadura"},
     ["as"] = {"asunto","asado","aspecto","asi","asistir","asia","ask","aspire","assist","assign"},
     ["at"] = {"atras","atacar","atencion","atomo","atardecer","atleta","atender","attach","attack","attempt"},
     ["au"] = {"aula","audio","aumentar","aurora","aumenta","autor","auto","august","audit","ausente"},
@@ -114,13 +113,13 @@ local additional_combinations = {
     ["bi"] = {"bien","bicho","bilingue","billar","binary","birth","bible","bingo","bicycle","binder"},
     ["bj"] = {"bajarjo","bjork","bjoy","bjut","bjorn","bjdoll","bjnew","bjoule","bjplan","bjtech"},
     ["bk"] = {"bokeh","bklyn","bkd","bkgrnd","bkup","bkash","bkend","bkeditor","bkbox","bkcase"},
-    ["bl"] = {"blanco","blusa","blando","bless","block","blend","blind","blog","blood","blue"},
+    ["bl"] = {"blanco","blusa","blando","bless","block","blend","blind","blog","blood","blue", "blindaje", "bloque", "blow", "blindar", "blank", "blason", "blade"},
     ["bm"] = {"bomba","bmw","bmain","bmed","bmnode","bmd","bmerc","bmint","bmsoft","bmusic"},
     ["bn"] = {"banco","bnl","bnv","bnr","bnc","bnet","bnk","bnote","bnone","bnfield"},
     ["bo"] = {"boca","bonito","bomba","bolsa","book","board","bottle","bonus","border","bonus"},
     ["bp"] = {"bpm","bpo","bpac","bpago","bport","bpilot","bpulse","bpdata","bpack","bpv"},
     ["bq"] = {"bq","bqtest","bquest","bqa","bqcode","bqapp","bquick","bquiet","bquota","bqfile"},
-    ["br"] = {"bravo","brisa","brillo","bronce","bread","bridge","brown","bring","break","breeze"},
+    ["br"] = {"bravo","brisa","brillo","bronce","bread","bridge","brown","bring","break","breeze", "brazo", "broma", "brother", "bruja", "brinco", "brain", "bruto"},
     ["bs"] = {"bso","bschool","bsafe","bsport","bsales","bscene","bscope","bsell","bsend","bsing"},
     ["bt"] = {"bote","bto","btex","btrack","btree","btime","btv","bteam","btouch","btask"},
     ["bu"] = {"buen","buscar","bucle","bufanda","build","bundle","busy","business","button","butter"},
@@ -130,7 +129,7 @@ local additional_combinations = {
     ["by"] = {"bypass","byte","bylaw","byline","bygone","byproduct","byroad","byhand","bytest","byname"},
     ["bz"] = {"bazar","bzone","bzoom","bzcode","bznet","bzfile","bzshop","bzdata","bzcall","bzhelp"},
 
-    -- Segundo bloque: 100 combinaciones adicionales más (nuevas)
+    -- BLOQUE 2: TUS COMBINACIONES QA-QZ, RA-RZ
     ["qa"] = {"quasar","quaatar","quaalude","qaida","qaazi","qaresh","qaeto","qaidaa","qaarel","qaan"},
     ["qb"] = {"qboard","qbtest","qbottle","qbunny","qbank","qbite","qbash","qbyte","qbloom","qbroad"},
     ["qc"] = {"qcode","qcircle","qcircuit","qcafe","qclient","qcopy","qcloud","qcraft","qcore","qcrest"},
@@ -172,7 +171,7 @@ local additional_combinations = {
     ["rl"] = {"rload","rline","rlink","rlive","rlogo","rlist","rlight","rlab","rlock","rloop"},
     ["rm2"] = {"rmark","rmore","rmain","rmeet","rmode","rmail","rmeta","rmesh","rmesh","rmove"},
     ["rn"] = {"rnote","rnet","rnode","rname","rnews","rnow","rnear","rnova","rnest","rnull"},
-    ["ro"] = {"rojo","rosa","ropa","rodar","roca","roman","robot","rocket","rock","room"},
+    ["ro"] = {"rojo","rosa","ropa","rodar","roca","roman","robot","rocket","rock","room", "romper", "root", "robar", "roll", "round", "rostro"},
     ["rp"] = {"rpath","rplay","rpack","rpost","rport","rprint","rplus","rpress","rpanel","rpilot"},
     ["rq"] = {"rqtest","rqnet","rqdata","rqapp","rqcode","rqtask","rqteam","rqfile","rqtool","rqzone"},
     ["rr"] = {"rroot","rrest","rrate","rride","rrain","rrange","rranch","rrap","rrave","rright"},
@@ -184,17 +183,142 @@ local additional_combinations = {
     ["rx"] = {"rxnet","rxdata","rxbox","rxpath","rxcode","rxapp","rxlink","rxshop","rxplay","rxtest"},
     ["ry"] = {"ryan","rythm","rye","rya","ryze","ryal","ryder","ryguy","ryker","ryoma"},
     ["rz"] = {"rzone","rzoom","rzip","rzest","rzero","rzebra","rzone","rzinc","rzap","rzoo"},
+
+    -- BLOQUE 3: LAS COMBINACIONES EXPLÍCITAS QUE PEDISTE (Y SÍLABAS EXTRA)
+    ["fo"] = {"foco", "food", "forma", "forest", "foto", "force", "fondo", "foot", "foca", "four", "fuego", "found", "folleto", "fold", "fogata"},
+    ["xi"] = {"xilofono", "xiao", "xiomara", "xis", "xiphoid", "xiphias", "xinca", "xileno", "xilografia", "xipho"},
+    ["xo"] = {"xoloitzcuintle", "xoxo", "xoanon", "xocoyote", "xochitl", "xocolatl", "xolo", "xoco", "xochicuicatl", "xoc"},
+    ["xt"] = {"xtreme", "xtra", "xtrac", "xterm", "xtep", "xtension", "xtrad", "xtremist", "xterra", "xtype"},
+    ["to"] = {"todo", "tomar", "today", "toro", "town", "torre", "touch", "toser", "tour", "toy", "tonto", "total", "top", "tomate", "topic"},
+    ["lu"] = {"luna", "luz", "luck", "lugar", "lunch", "lupa", "lung", "luchar", "lump", "lujo", "lunes", "lunar", "luces", "lull", "lucir"},
+    ["zu"] = {"zumo", "zurdo", "zulu", "zumbido", "zumba", "zucchini", "zurcir", "zupia", "zumbador", "zuzar", "zueco", "zumbido", "zumo", "zurrar", "zurco"},
+    ["uz"] = {"uzbek", "uzbekistan", "uzi", "uzos", "uzk", "uzbeko", "uzma", "uzair", "uzuri", "uzziel"},
+    ["so"] = {"sol", "sopa", "sound", "solo", "south", "sombra", "song", "sobre", "soap", "soldado", "sorpresa", "soon", "sordo", "soft", "sociedad"},
+    ["ce"] = {"cerca", "center", "centro", "cell", "cero", "cebra", "century", "cerdo", "celebrate", "cena", "celular", "cement", "ceniza", "cerebro", "ceja"},
+    ["ja"] = {"jabon", "jazz", "jamon", "jacket", "jarra", "jail", "jardin", "jaw", "jalar", "jar", "jaula", "jawbone", "japon", "jack", "jabalina"},
+    ["po"] = {"poder", "power", "polvo", "post", "pozo", "police", "pollo", "point", "pobre", "pool", "poco", "port", "policia", "pound", "poeta"},
+    ["fl"] = {"flor", "fly", "flaco", "flag", "flecha", "floor", "flotar", "flow", "fluido", "flat", "flama", "flight", "flauta", "flash", "flock"},
+    ["ky"] = {"kyoto", "kyle", "kylie", "kyat", "kyd", "kyack", "kyles", "kylee", "kyushu", "kyrie"},
+
+    -- MÁS COMBINACIONES COMUNES (A-Z)
+    ["fa"] = {"familia", "family", "fama", "fact", "falso", "face", "faro", "farm", "favor", "fast", "falda", "fade", "fantasma", "fall", "falla"},
+    ["fe"] = {"feliz", "feel", "feria", "fear", "fecha", "feed", "feo", "female", "fenomeno", "fence", "ferrocarril", "fellow", "festejo", "fever", "febrero"},
+    ["fi"] = {"fin", "fire", "fiesta", "fish", "fijo", "find", "figura", "five", "fila", "fight", "firma", "fill", "filosofia", "final", "filtro"},
+    ["fu"] = {"fuego", "fun", "fuerte", "future", "fuente", "full", "fuga", "fund", "furia", "fuel", "fusil", "funny", "futbol", "fur", "funda"},
+    ["ga"] = {"gato", "game", "ganar", "gas", "gallina", "gate", "gafas", "gap", "garaje", "garden", "galleta", "gather", "garganta", "gallery", "gastar"},
+    ["ge"] = {"gente", "get", "general", "gear", "genio", "gentle", "gemelo", "gender", "gerente", "genuine", "gesto", "generate", "gelatina", "genius", "germen"},
+    ["gi"] = {"gigante", "girl", "girar", "give", "gimnasio", "gift", "girasol", "giant", "gitano", "ginger", "gin", "giga", "ginebra", "gist", "giro"},
+    ["go"] = {"gota", "go", "gordo", "gold", "goma", "good", "golpe", "goat", "gorra", "goal", "gobierno", "golf", "gorila", "god", "goma"},
+    ["gu"] = {"gusano", "guy", "guante", "guess", "guardia", "guest", "guerra", "guide", "guitarra", "gun", "gusto", "guard", "guia", "guilt", "guapo"},
+    ["ha"] = {"hacer", "have", "hambre", "hat", "hacia", "hand", "hasta", "hair", "hablar", "half", "hacha", "hall", "harina", "habit", "hazaña"},
+    ["he"] = {"hermano", "head", "helado", "hear", "hermoso", "heart", "hecho", "heavy", "herramienta", "help", "hechizo", "hello", "herida", "hero", "helicoptero"},
+    ["hi"] = {"hielo", "history", "hijo", "high", "hilo", "hill", "historia", "hide", "hierba", "hit", "hielo", "him", "hierro", "hire", "higo"},
+    ["ho"] = {"hombre", "home", "hora", "house", "hoja", "horse", "hotel", "hope", "hospital", "hot", "hombro", "hour", "horno", "hold", "hoy"},
+    ["hu"] = {"huevo", "human", "hueso", "hunt", "humo", "hurt", "huella", "huge", "huerto", "hungry", "huir", "hundred", "humor", "husband", "hundir"},
+    ["la"] = {"lago", "lake", "lado", "last", "lapiz", "land", "lana", "large", "lata", "late", "ladron", "laugh", "lavar", "law", "labio"},
+    ["le"] = {"leche", "learn", "leon", "leave", "leer", "left", "lejos", "leg", "lengua", "less", "letra", "letter", "ley", "level", "leccion"},
+    ["li"] = {"libro", "life", "libre", "light", "limpio", "line", "limon", "list", "liquido", "listen", "lindo", "little", "liceo", "live", "liga"},
+    ["lo"] = {"lobo", "look", "loco", "long", "lodo", "love", "lomo", "lost", "logro", "low", "lote", "lot", "loro", "loud", "lotería"},
+    ["na"] = {"nada", "name", "nariz", "nature", "naranja", "nation", "nadar", "narrow", "nave", "navy", "nacido", "nail", "natural", "naked", "nacion"},
+    ["ne"] = {"negro", "need", "nervio", "never", "nevera", "next", "negocio", "new", "nena", "news", "neto", "neck", "nevar", "nest", "neutral"},
+    ["ni"] = {"nino", "night", "nieve", "nice", "nido", "nine", "ninguno", "nickname", "nivel", "niece", "nicho", "nickel", "nitido", "ninja", "niebla"},
+    ["no"] = {"noche", "now", "norte", "nose", "nombre", "north", "nota", "note", "novedad", "nothing", "novio", "notice", "nube", "noun", "noble"},
+    ["nu"] = {"nube", "number", "nuevo", "nut", "numero", "nurse", "nuez", "null", "nuca", "nugget", "nudo", "nuance", "nuestro", "nucleus", "nublado"},
+    ["sa"] = {"sal", "safe", "saber", "say", "sapo", "sand", "sabor", "sad", "santo", "same", "sangre", "salt", "salto", "save", "saco"},
+    ["si"] = {"silla", "sit", "siempre", "size", "siglo", "sister", "silencio", "side", "siete", "sign", "sirena", "sick", "sistema", "silver", "sitio"},
+    ["su"] = {"suelo", "sun", "sueno", "sure", "sucio", "such", "suerte", "sugar", "sur", "summer", "sudar", "support", "suma", "supply", "subir"},
+    ["ta"] = {"taza", "take", "tarde", "tall", "taco", "talk", "tapa", "task", "taxi", "tape", "tambor", "table", "talla", "taste", "talento"},
+    ["te"] = {"teclado", "tell", "telefono", "ten", "tela", "test", "techo", "teach", "tema", "team", "templo", "tear", "tesoro", "term", "texto"},
+    ["ti"] = {"tiempo", "time", "tierra", "ticket", "tigre", "tie", "tijeras", "tiny", "tiburon", "tired", "tienda", "title", "timido", "tip", "tipo"},
+    ["va"] = {"vaca", "value", "vaso", "vast", "valle", "valley", "vapor", "van", "varios", "vary", "valiente", "valid", "vacio", "vacation", "vago"},
+    ["ve"] = {"ventana", "very", "verdad", "vehicle", "verde", "verb", "vestido", "verse", "veloz", "veto", "vecino", "vein", "vender", "venture", "veneno"},
+    ["vi"] = {"vida", "view", "viejo", "visit", "vino", "village", "viento", "virus", "viaje", "vision", "vidrio", "victim", "victoria", "vital", "violencia"},
+    ["vo"] = {"volcan", "voice", "voz", "vote", "volar", "volume", "volver", "void", "volante", "vocal", "voluntad", "voyage", "vodka", "vow", "vocabulario"},
+
+    -- CONSONANTES COMPUESTAS MÁS COMUNES
+    ["pl"] = {"plato", "play", "planeta", "please", "planta", "place", "pluma", "plane", "playa", "plastic", "plomo", "plan", "pleito", "plug", "plano"},
+    ["gl"] = {"globo", "glass", "gloria", "globe", "glacial", "glad", "glaciar", "glove", "glándula", "glue", "gloton", "glow", "glifo", "glance", "glaseado"},
+    ["cl"] = {"clavo", "class", "clima", "clean", "clase", "clear", "cliente", "close", "claro", "cloud", "club", "clock", "clavel", "climb", "clamor"},
+    ["cr"] = {"cruz", "cry", "crema", "cross", "crimen", "crazy", "cristal", "crowd", "crup", "crash", "cruel", "cream", "crear", "crop", "crecer"},
+    ["dr"] = {"dragon", "drive", "drama", "drop", "drogas", "draw", "drenaje", "dream", "drastico", "drink", "drone", "dry", "drill", "dress", "druida"},
+    ["fr"] = {"fresa", "free", "frio", "friend", "fruta", "front", "frente", "frog", "frasco", "frame", "frecuencia", "fresh", "frito", "fruit", "fraude"},
+    ["gr"] = {"gran", "great", "gris", "green", "grupo", "group", "grasa", "grow", "gratis", "ground", "grito", "grass", "grano", "gray", "grado"},
+    ["pr"] = {"precio", "price", "premio", "prize", "prueba", "proud", "prisa", "print", "primo", "press", "problema", "prove", "pronto", "program", "profesor"},
+    
+    -- OTRAS LETRAS "O"
+    ["oa"] = {"oasis", "oaxaca", "oar", "oahu", "oak", "oats", "oarfish", "oarlock", "oast", "oath"},
+    ["ob"] = {"objeto", "obra", "obvio", "observe", "obtain", "obliga", "obispo", "obscure", "orbit", "oboe"},
+    ["oc"] = {"occidente", "occur", "ocean", "ocho", "octubre", "oculto", "ocupar", "ocre", "octave", "occupy"},
+    ["od"] = {"odio", "oda", "odor", "odd", "odds", "odisea", "odontologo", "odium", "odyssey", "odometer"},
+    ["oe"] = {"oeste", "oeuvre", "oenology", "oedipus", "oersted", "oestrus", "oenophile", "oecumenic", "oecist", "oeil"},
+    ["of"] = {"oficina", "oficio", "offer", "off", "often", "oficial", "ofender", "ofensa", "offline", "offset"},
+    ["og"] = {"ogro", "ogre", "ogham", "ogival", "ogive", "ogle", "ogress", "ogamic", "ogdoad", "ogler"},
+    ["oh"] = {"ohio", "ohm", "ohioan", "ohmage", "ohmmeter", "ohmy", "oho", "ohr", "ohios", "ohs"},
+    ["oi"] = {"oido", "oil", "oiga", "ointment", "oink", "oiler", "oilbird", "oilcan", "oilcloth", "oilseed"},
+    ["oj"] = {"ojo", "ojal", "ojeada", "ojear", "ojera", "ojito", "ojival", "ojiva", "ojete", "ojoso"},
+    ["ok"] = {"okay", "okapi", "okina", "okta", "okra", "okays", "okeh", "oklahoma", "okie", "oking"},
+    ["ol"] = {"ola", "old", "oliva", "olvidar", "olor", "olympic", "olive", "older", "olmo", "olimpo"},
+    ["om"] = {"omega", "omit", "omen", "ombligo", "omelet", "omnibus", "omnivoro", "oman", "omb", "omg"},
+    ["on"] = {"once", "online", "onda", "only", "onto", "ongoing", "onza", "onion", "onward", "onus"},
+    ["oo"] = {"oops", "oolong", "ooze", "oomph", "oocyte", "ooh", "oohs", "oomiac", "oology", "oolite"},
+    ["op"] = {"option", "open", "opinion", "operar", "oponer", "optico", "opera", "operate", "oppose", "optic"},
+    ["oq"] = {"oquedad", "oque", "oqueruela", "oques", "oquedales", "oquerula", "oquilla", "oquea", "oquedades", "oquedal"},
+    ["or"] = {"oro", "orden", "orar", "orbit", "oruga", "order", "orange", "organo", "origin", "orilla"},
+    ["os"] = {"oso", "oscuro", "oseo", "ostia", "ostrich", "oscilar", "osadia", "ostentar", "osario", "oscar"},
+    ["ot"] = {"otro", "other", "otono", "otorgar", "otaku", "otitis", "otero", "otoman", "otario", "oto"},
+    ["ou"] = {"out", "outside", "output", "ounce", "our", "ours", "oust", "outage", "outfit", "outing"},
+    ["ov"] = {"oveja", "ovalo", "over", "oven", "ovary", "ovario", "ovation", "overall", "overcome", "oval"},
+    ["ow"] = {"owl", "own", "owner", "owe", "owing", "owls", "owlet", "owned", "owen", "owlish"},
+    ["ox"] = {"oxigeno", "oxide", "ox", "oxford", "oxidant", "oxidar", "oxido", "oxbow", "oxcart", "oxeye"},
+    ["oy"] = {"oye", "oyster", "oyente", "oyo", "oyamel", "oyes", "oyera", "oyese", "oyendo", "oyes"},
+    ["oz"] = {"ozono", "ozone", "ozark", "ozonize", "ozo", "ozocerite", "ozonous", "ozonide", "ozz", "ozonic"},
+
+    -- COMBINACIONES RARAS (ES + EN)
+    ["ps"] = {"psicologia", "psychology", "pseudo", "psalm", "psiquiatra", "pseudonym", "psicopata", "psoriasis", "psycho", "psique"},
+    ["kn"] = {"knight", "knife", "know", "knock", "kneel", "knit", "knob", "knot", "knapsack", "knuckle"},
+    ["wr"] = {"write", "wrong", "wrap", "wrath", "wrist", "wrench", "wrestle", "wrinkle", "wrought", "wreck"},
+    ["gn"] = {"gnomo", "gnarly", "gnash", "gnostic", "gnat", "gneis", "gnomon", "gnocchi", "gnu", "gnosis"},
+    ["sch"] = {"school", "schedule", "scheme", "scholar", "schizophrenia", "schnauzer", "schooner", "schwa", "schism", "schmuck"},
+    ["squ"] = {"square", "squad", "squeeze", "squirrel", "squid", "squash", "squeak", "squadron", "squint", "squeal"},
+    ["chr"] = {"chrome", "christ", "chronic", "chronicle", "christian", "chromatic", "chromatid", "chronology", "chrysalis", "chrysanthemum"},
+    ["sph"] = {"sphere", "sphinx", "spherical", "sphincter", "sphenoid", "spheroid", "sphygmomanometer"},
+    ["spl"] = {"split", "splash", "splendid", "splinter", "spleen", "splicing", "splotch", "splatter", "splurge"},
+    ["dw"] = {"dwarf", "dwell", "dwindle", "dwayne", "dwight", "dweeb", "dwelling", "dweller"},
+    ["tw"] = {"twin", "two", "tweet", "twist", "twelve", "twenty", "twilight", "twister", "twirl", "tweak"},
+    ["eu"] = {"europa", "euro", "euphoria", "eucalipto", "eulogy", "eunuch", "eureka", "europeo", "euthanasia", "euphonic"},
+    ["pn"] = {"pneumonia", "pneumatic", "pneuma", "pneumatics", "pneumococo", "pneumothorax"},
+    ["cz"] = {"czar", "czarina", "czech", "czarist", "czardas"},
+    ["xy"] = {"xylophone", "xylema", "xylose", "xylitol", "xylene"},
+    ["tz"] = {"tzar", "tzatziki", "tzeltal", "tzotzil", "tzarism"},
+    ["vl"] = {"vladimir", "vlog", "vlogger", "vlan", "vlad", "vlach"},
+    ["thm"] = {"algorithm", "rhythm", "logarithm", "isthmus", "asthma"},
+    ["gh"] = {"ghost", "ghoul", "ghetto", "ghastly", "ghee", "ghana", "gherkin", "ghostly"},
+    ["rh"] = {"rhythm", "rhino", "rhombus", "rhetoric", "rheumatism", "rhinoceros", "rhyme", "rhesus"},
 }
 
--- Merge sin sobrescribir: solo agregamos claves que no existan ya en `database`.
+-- Merge SUPER INTELIGENTE: Si la clave no existe, la crea. 
+-- Si ya existe (como 'ar', 'po', 'ro', etc.), suma las palabras nuevas sin borrar las tuyas.
 for k, v in pairs(additional_combinations) do
     if database[k] == nil then
         database[k] = v
+    else
+        for _, word in ipairs(v) do
+            local exists = false
+            for _, existingWord in ipairs(database[k]) do
+                if existingWord == word then 
+                    exists = true 
+                    break 
+                end
+            end
+            if not exists then 
+                table.insert(database[k], word) 
+            end
+        end
     end
 end
 
 -- =====================================================================
--- ⚙️ MOTOR DE INTERFAZ Y LÓGICA DE BÚSQUEDA (sin cambios funcionales)
+-- ⚙️ MOTOR DE INTERFAZ Y LÓGICA DE BÚSQUEDA
 -- =====================================================================
 
 local CoreGui = game:GetService("CoreGui")
